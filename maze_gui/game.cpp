@@ -32,6 +32,7 @@ void draw_grid(bool is_lost = false){
         runner_x = 1, runner_y = 39;
     }
 
+    
     for(int x=0; x<grid_x; x++){
         for(int y=0; y<grid_y; y++){
                 if(x == runner_x and y == runner_y){
@@ -107,6 +108,8 @@ void draw_path_unit(int x, int y){
 bool win(){
     return runner_x == target_x and runner_y == target_y;
 }
+
+
 bool lose(chrono::time_point<std::chrono::system_clock> Start){
     auto End = std::chrono::system_clock::now();
     auto duration = End - Start;
